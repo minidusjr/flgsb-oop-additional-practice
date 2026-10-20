@@ -25,17 +25,33 @@ public class StudentRegistry {
         
         // Step 5: Compare the grades of the two students and print who has the higher grade
         // Hint: Create a separate method for this comparison
-        
+        Student higherGraStudent = compareGrades(student1, student2);
+        System.out.println("\nComparing Grades....");
+        System.out.println(higherGraStudent.getName() + " has the higher grade with " + higherGraStudent.getGrade());
         
         // Step 6: Test the letter grade method for both students
-        
+        System.out.println("\nLetter Grade:");
+        System.out.println(student1.getName() + "'s Letter Grade is " + student1.getLetterGrade());
+        System.out.println(student2.getName() + "'s Letter Grade is " + student2.getLetterGrade());
         
         // Step 7: Test the passing status method for both students
-        
-        
+        System.out.println("\nPassing Status");
+        System.out.println(student1.getName() + " is " + (student1.isPassing() ? "passing" : "not passing"));
+        System.out.println(student2.getName() + " is " + (student2.isPassing() ? "passing" : "not passing"));
+
         // Step 8: Change one student to inactive and display the updated information
+        System.out.println("\nChanging " + student1.getName() + "'s status into inactive");
+        student1.setIsActive(false);
+        student1.displayStudentDetails();
     }
     
     // Step 9: Create a static method to compare two students' grades and return the student with the higher grade
     // Hint: Take two Student objects as parameters
+    public static Student compareGrades(Student student1, Student student2){
+        if(student1.getGrade() > student2.getGrade()){
+            return student1;
+        } else {
+            return student2;
+        }
+    }
 }

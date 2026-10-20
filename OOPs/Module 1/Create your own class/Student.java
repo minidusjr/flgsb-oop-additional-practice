@@ -56,7 +56,7 @@ public class Student {
     // Hint: Use System.out.println() to print all student information
     // Format should include ID, name, grade, and status (Active/Inactive)
     public void displayStudentDetails(){
-        System.out.println("Display Student Details:");
+        System.out.println("\nDisplay Student Details:");
         System.out.println("Name: " + this.name);
         System.out.println("Student ID: " + this.studentId);
         System.out.println("Grade: " + this.grade);
