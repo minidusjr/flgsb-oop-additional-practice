@@ -55,7 +55,7 @@ public class Employee implements Cloneable {
 
     public void setAge(int age){
         if(age >= 18 && age <= 54){
-            this.name = name;
+            this.age = age;
         } else {
             System.out.println("Error: Age must be between 18 - 65");
             this.age = 18;
