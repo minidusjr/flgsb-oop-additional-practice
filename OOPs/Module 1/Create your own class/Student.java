@@ -1,4 +1,3 @@
-
 public class Student {
     // Step 1: Declare private variables for studentId, name, grade, and isActive
     // Hint: Use appropriate data types (String, String, double, boolean)
@@ -56,7 +55,7 @@ public class Student {
     // Step 4: Create a method to display student details
     // Hint: Use System.out.println() to print all student information
     // Format should include ID, name, grade, and status (Active/Inactive)
-    public void displayDetails(){
+    public void displayStudentDetails(){
         System.out.println("Display Student Details:");
         System.out.println("Name: " + this.name);
         System.out.println("Student ID: " + this.studentId);

@@ -2,18 +2,26 @@
 public class StudentRegistry {
     public static void main(String[] args) {
         // Step 1: Create two instances of the Student class
-        
+        Student student1 = new Student();
+        Student student2 = new Student();
         
         // Step 2: Use setter methods to set values for all attributes of first student
         // Example values: ID "S001", name "John Doe", grade 85.5, active true
-        
-        
+        student1.setStudentId("S001");
+        student1.setName("Minidu Sathsara");
+        student1.setGrade(85.5);
+        student1.setIsActive(true);
+
         // Step 3: Set values for second student
         // Example values: ID "S002", name "Jane Smith", grade 92.0, active true
-        
-        
-        // Step 4: Display details of both students
-        
+        student2.setStudentId("S002");
+        student2.setName("Divya Thathsarani");
+        student2.setGrade(93.5);
+        student2.setIsActive(true);
+
+        // Step 4: Display details of both students     
+        student1.displayStudentDetails();
+        student2.displayStudentDetails();
         
         // Step 5: Compare the grades of the two students and print who has the higher grade
         // Hint: Create a separate method for this comparison
