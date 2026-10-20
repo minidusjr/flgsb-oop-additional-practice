@@ -3,7 +3,8 @@ public class TestEncapsulation {
     public static void main(String[] args) {
         // Step 1: Create two instances of the Employee class
         // One using the parameterized constructor and one using default constructor with setters
-        
+        Employee employee1 = new Employee("Minidu Sathsara", 24, 45000.00);
+        Employee employee2 = new Employee("Divya Thathsara")
         // Step 2: Print details of both employees
         
         // Step 3: Try setting invalid values (null name, age outside range, negative salary)
