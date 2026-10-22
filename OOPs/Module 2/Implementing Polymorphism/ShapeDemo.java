@@ -12,9 +12,8 @@ public class ShapeDemo {
 
         // Step 3: Create an interactive menu to add shapes to the array
         int count = 0;
-        boolean running = true;
 
-        while (running) {
+        while (true) {
             System.out.println("\n--- Shape Menu ---");
             System.out.println("1. Add a Circle");
             System.out.println("2. Add a Rectangle");
@@ -25,12 +24,10 @@ public class ShapeDemo {
             int choice = scanner.nextInt();
             scanner.nextLine(); // consume newline
 
-            switch (choice) {
-                case 1:
-                    if (count >= shapes.length) {
-                        System.out.println("Array is full! Cannot add more shapes.");
-                        break;
-                    }
+            if (choice == 1) {
+                if (count >= shapes.length) {
+                    System.out.println("Array is full! Cannot add more shapes.");
+                } else {
                     // Step 4: Prompt for Circle attributes
                     System.out.print("Enter name: ");
                     String cName = scanner.nextLine();
@@ -44,13 +41,11 @@ public class ShapeDemo {
                     System.out.println("Area: " + shapes[count].area());
                     System.out.println("Perimeter: " + shapes[count].perimeter());
                     count++;
-                    break;
-
-                case 2:
-                    if (count >= shapes.length) {
-                        System.out.println("Array is full! Cannot add more shapes.");
-                        break;
-                    }
+                }
+            } else if (choice == 2) {
+                if (count >= shapes.length) {
+                    System.out.println("Array is full! Cannot add more shapes.");
+                } else {
                     System.out.print("Enter name: ");
                     String rName = scanner.nextLine();
                     System.out.print("Enter color: ");
@@ -64,13 +59,11 @@ public class ShapeDemo {
                     System.out.println("Area: " + shapes[count].area());
                     System.out.println("Perimeter: " + shapes[count].perimeter());
                     count++;
-                    break;
-
-                case 3:
-                    if (count >= shapes.length) {
-                        System.out.println("Array is full! Cannot add more shapes.");
-                        break;
-                    }
+                }
+            } else if (choice == 3) {
+                if (count >= shapes.length) {
+                    System.out.println("Array is full! Cannot add more shapes.");
+                } else {
                     System.out.print("Enter name: ");
                     String tName = scanner.nextLine();
                     System.out.print("Enter color: ");
@@ -86,30 +79,25 @@ public class ShapeDemo {
                     System.out.println("Area: " + shapes[count].area());
                     System.out.println("Perimeter: " + shapes[count].perimeter());
                     count++;
-                    break;
-
-                case 4:
-                    // Step 6: Display all shapes using polymorphism
-                    if (count == 0) {
-                        System.out.println("No shapes added yet.");
-                    } else {
-                        System.out.println("\n--- All Shapes ---");
-                        for (int i = 0; i < count; i++) {
-                            System.out.println(shapes[i].toString());
-                            System.out.println("Area: " + shapes[i].area());
-                            System.out.println("Perimeter: " + shapes[i].perimeter());
-                            System.out.println();
-                        }
+                }
+            } else if (choice == 4) {
+                // Step 6: Display all shapes using polymorphism
+                if (count == 0) {
+                    System.out.println("No shapes added yet.");
+                } else {
+                    System.out.println("\n--- All Shapes ---");
+                    for (int i = 0; i < count; i++) {
+                        System.out.println(shapes[i].toString());
+                        System.out.println("Area: " + shapes[i].area());
+                        System.out.println("Perimeter: " + shapes[i].perimeter());
+                        System.out.println();
                     }
-                    break;
-
-                case 5:
-                    running = false;
-                    System.out.println("Goodbye!");
-                    break;
-
-                default:
-                    System.out.println("Invalid choice. Please try again.");
+                }
+            } else if (choice == 5) {
+                System.out.println("Goodbye!");
+                break;
+            } else {
+                System.out.println("Invalid choice. Please try again.");
             }
         }
 

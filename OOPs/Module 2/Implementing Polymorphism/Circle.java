@@ -19,13 +19,13 @@ public class Circle extends Shape {
     // Hint: Area of a circle = π * radius * radius (use Math.PI)
     @Override
     public double area(){
-        return Math.PI * radius * radius;
+        return Math.round(Math.PI * radius * radius);
     }
     // Step 5: Override the perimeter() method to calculate the perimeter (circumference) of a circle
     // Hint: Perimeter of a circle = 2 * π * radius (use Math.PI)
     @Override
     public double perimeter(){
-        return 2 * Math.PI * radius;
+        return Math.round(2 * Math.PI * radius);
     }
     
     // Step 6: Override toString() method to include circle-specific information
